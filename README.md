@@ -1,4 +1,5 @@
 # Technics Player Selector
-<img width="618" height="404" alt="Capture d’écran 2026-01-24 081420" src="https://github.com/user-attachments/assets/f17a7213-a0bc-41ad-bad6-70a9837c6a88" />
+<img width="532" height="400" alt="1" src="https://github.com/user-attachments/assets/56c9ec17-b29a-41a6-9ae1-19c416416de8" />
+
 
 
