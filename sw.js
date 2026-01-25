@@ -4,7 +4,6 @@ const ASSETS = [
   'img/Technics-Logo-org.png',
   'img/favicon.png',
   'style.css',
-  'manifest.json'
 ];
 
 // Installation du Service Worker
