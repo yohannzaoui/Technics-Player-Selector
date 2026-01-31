@@ -1,90 +1,190 @@
 :root {
-            --font-size-base: 32px;
-            --logo-width: 400px;
-            --gold: #d4af37;
-        }
+    --font-size-base: 32px;
+    --logo-width: 400px;
+    --gold: #d4af37;
+}
 
-   body {
+body {
     background-color: #000000;
     /* On augmente l'opacité à 0.4 et on réduit la diffusion pour plus d'éclat */
     background-image: radial-gradient(circle at center, rgba(255, 191, 0, 0.3) 0%, rgba(0, 0, 0, 0) 60%);
     background-attachment: fixed;
     color: #ffffff;
     font-family: 'Zalando Sans Expanded', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     user-select: none;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-        .custom-link {
-            color: #ffffff !important;
-            text-decoration: none;
-            font-size: var(--font-size-base);
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            transition: opacity 0.2s ease;
-        }
+.custom-link {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s ease;
+    text-align: center;
+}
 
-        /* 1. Mini (Bruno Ace) */
-        .font-mini {
-            font-family: 'Bruno Ace', sans-serif;
-            text-transform: uppercase;
-        }
+/* 1. Mini (Bruno Ace) */
+.font-mini {
+    font-family: 'Bruno Ace', sans-serif;
+    text-transform: uppercase;
+}
 
-        /* 2. HiFi (Lexend Mega) */
-        .font-hifi {
-            font-family: 'Lexend Mega', sans-serif;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
+/* 2. HiFi (Lexend Mega) */
+.font-hifi {
+    font-family: 'Lexend Mega', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
-        /* 3. Master Audio Player (Pinyon Script) */
-        .font-master {
-            font-family: 'Pinyon Script', cursive;
-            font-size: 60px;
-            letter-spacing: 0px;
-            text-transform: none;
-        }
+/* 3. Master Audio Player (Pinyon Script) */
+.font-master {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 60px;
+    letter-spacing: 0px;
+    text-transform: none;
+}
 
-        /* 4. Touchscreen (Doto) */
-        .font-touchscreen {
-            font-family: 'Doto', sans-serif;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+/* 4. Touchscreen (Doto) */
+.font-touchscreen {
+    font-family: 'Doto', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-        .custom-link:hover {
-            opacity: 0.7;
-            color: #ffffff !important;
-        }
+.custom-link:hover {
+    opacity: 0.7;
+    color: #ffffff !important;
+}
 
-        .logo-top {
-            width: var(--logo-width);
-            height: auto;
-            margin-bottom: 35px;
-            border: #ffffff 5px solid;
-            box-shadow: #616161 0px 0px 15px 5px;
-        }
+.logo-top {
+    width: var(--logo-width);
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 35px;
+    border: #ffffff 5px solid;
+    box-shadow: #616161 0px 0px 15px 5px;
+}
 
-        /* Classes de stabilité sauvegardées */
-        .brand-logo { 
-            height: 18px; 
-            width: auto; 
-            opacity: 0.85; 
-            filter: grayscale(1); 
-            transform: translateY(-3px); 
-        }
+.links-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
 
-        .repeat-mode-label {
-            position: absolute; 
-            top: 3px; 
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 10px; 
-            font-weight: 900;
-            color: var(--gold); 
-            display: none;
-            letter-spacing: 0px;
-        }
+/* Classes de stabilité sauvegardées */
+.brand-logo { 
+    height: 18px; 
+    width: auto; 
+    opacity: 0.85; 
+    filter: grayscale(1); 
+    transform: translateY(-3px); 
+}
+
+.repeat-mode-label {
+    position: absolute; 
+    top: 3px; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px; 
+    font-weight: 900;
+    color: var(--gold); 
+    display: none;
+    letter-spacing: 0px;
+}
+
+/* Responsive adjustments */
+
+/* Tablettes */
+@media (max-width: 991px) {
+    :root {
+        --font-size-base: 28px;
+        --logo-width: 350px;
+    }
+    
+    .font-master {
+        font-size: 50px;
+    }
+}
+
+/* Petites tablettes et grands smartphones */
+@media (max-width: 767px) {
+    :root {
+        --font-size-base: 24px;
+        --logo-width: 300px;
+    }
+    
+    .font-master {
+        font-size: 42px;
+    }
+    
+    .logo-top {
+        margin-bottom: 25px;
+        border-width: 4px;
+    }
+    
+    body {
+        overflow-y: auto;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 576px) {
+    :root {
+        --font-size-base: 20px;
+        --logo-width: 250px;
+    }
+    
+    .font-master {
+        font-size: 36px;
+    }
+    
+    .logo-top {
+        margin-bottom: 20px;
+        border-width: 3px;
+    }
+    
+    .custom-link {
+        padding: 8px 0;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 400px) {
+    :root {
+        --font-size-base: 18px;
+        --logo-width: 200px;
+    }
+    
+    .font-master {
+        font-size: 32px;
+    }
+    
+    .logo-top {
+        margin-bottom: 15px;
+    }
+}
+
+/* Mode paysage sur mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+    body {
+        overflow-y: auto;
+    }
+    
+    .logo-top {
+        margin-bottom: 15px;
+        width: 200px;
+    }
+    
+    :root {
+        --font-size-base: 18px;
+    }
+    
+    .font-master {
+        font-size: 28px;
+    }
+}
